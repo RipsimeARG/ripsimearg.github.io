@@ -1,54 +1,59 @@
-<html>
- <body>
+<p style="text-align: center;"><br /><strong>Инструкция для импорта данных через Postman в Altcraft Platform.</strong></p>
+<hr />
 <title>Инструкция</title>
   <style>
    body{ background-color: lightblue;
-    width: 600px; /* Ширина элемента в пикселах */
-    padding: 10px; /* Поля вокруг текста */
+    width: 800px; /* Ширина элемента в пикселах */
+    padding: 30px; /* Поля вокруг текста */
     margin: auto; /* Выравниваем по центру */
     outline-style: groove;
     outline-width: 1px;
-}
+   }
+ }
 </style>
-<p style="text-align: center;"><br /><strong>Инструкция для импорта данных через Postman в Altcraft Platform.</strong></p>
-<hr />
 <p>Другими словами необходимо при помощи Postman в базе данных Altcraft Platform создать запись о профиле, а именно ФИ,email, дату рождения. Эти данные можно передать в теле метода POST.</p>
-<p><br />Для просмотра видео инструкции нажмите на ссылку -</p>
-<p style="text-align: center;"><br /><span style="text-decoration: underline;">Пошаговая инструкция.</span></p>
+<p><br />Для просмотра видео инструкции нажмите на ссылку - <a href="https://youtu.be/nY7Trj1LhDg">Нажать для просмотра</a>
+<p style="text-align: center;">
+<br /><span style="text-decoration: underline;">Пошаговая инструкция.</span></p>
 <ul>
-<li>Открыть Postman или его web версию.</li>
+<li>Открыть Postman или его web-версию.</li>
 <li>Выбрать &ldquo;Workspaces&rdquo;.</li>
+<li>Создать коллекцию, нажав на "Collections".</li>
+<li>Нажать на кнопку "+" или "Create Collection".</li>
+<li>Дать название осмысленное название коллекции, например, "Работа с профилем".</li>
+<li>Создать запрос, нажав на "Add a request".</li>
+<li>Дать название новому запросу согласно цели запроса, например, "Импорт одного профиля".</li>
 <li>Изменить тип запроса с GET на POST, именно в теле метода POST будут введены данные для отправки в БД.</li>
 </ul>
-<p><img src="https://psv4.userapi.com/c237331/u344065381/docs/d31/a5d61b0d4a56/1-3.gif?extra=y5zA7i1D8XT-LS83ABdluPEw5pSTd-Uq4u9FCLdeTPaApOjmK4bFrTNMCQh3E7bC7kR-6Jr53JFAimGyioSD3JrWipLvuhAXXo0AfVPZiqeZgtgDfeydReOspGvcX-U46NQMrH0pbmP2tzIesVKqlCp5" alt="Пункты 1-3" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p><img src="https://psv4.userapi.com/c240331/u344065381/docs/d9/9e56bc504c62/1.gif?extra=_knkqMz69x4StplUoOv8IwiSIZVk3Ob-b3irJ50_j4cu7iY3KqT-keCezvQotCYbt-WwFrxXdV02kw_KSrvP8PgIIhrFK-U_NDWr8KHnwv8elZyMu-mD_LFONpBi3OC2FASUaIai6im7uZk806Zx9VbO" alt="Создание первого запроса" width="800" height="600" style="border-style: solid;" /></p>
 <ul>
-<li>В поле &ldquo;Enter request URL&rdquo; вставить ссылку API платформы <a href="https://ru.altkraft.com/api/v1.1/profiles/import">https://ru.altkraft.com/api/v1.1/profiles/import .</a>Выбрать пункт &ldquo;Body&rdquo; для настройки деталей запроса.</li>
+<li>В поле &ldquo;Enter request URL&rdquo; вставить ссылку API платформы <a href="https://ru.altkraft.com/api/v1.1/profiles/import">https://ru.altkraft.com/api/v1.1/profiles/import .</a></li>
+<li>Выбрать пункт &ldquo;Body&rdquo; для настройки деталей запроса.</li>
 <li>Нажать радиокнопку &ldquo;raw&rdquo; для выбора типа форматирования - Postman отправляет запрос с таким типом без проверки.</li>
 <li>Выбрать формат отправляемых данных - JSON.</li>
 </ul>
-<p><img src="http://psv4.userapi.com/c237131/u344065381/docs/d1/f5838713be33/4-8.gif?extra=aHJUR4NPiKoQgm4Isa29phBF8h66lo0rxu8TiU2XRz3LGnn7WK51thD_wmdkUL201b7w8HYx-jiQPt2sGKznQGyTSvZYLTcLAajgCczQguItMAhT3M62Kz0cLm1N3odPbTnlA5ptNhOTx1fQQ3byoPWk" alt="4-7" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p><img src="https://psv4.userapi.com/c240331/u344065381/docs/d42/614e7c9aac83/2.gif?extra=9ZL13aCtiuet7P-cAM6_YZtAS3PU9QM1pm9Sz9bqmaoa78ZheuCzvljEqn_EMborv-wClSTM5fYNBCXXxETtqGfApNZlnogdv7Gv9bRrakQY-E_oYY3gZ7ARlnLWgfJUIDuVBr7NbHMdAUrhjClG2mpd" alt="Второй этап" width="800" height="600" style="border-style: solid;" /></p>
 <ul>
 <li>В теле запроса указать необходимые данные о профиле:<br />{"token": "421dcf213c0b4089a839b08333de1f5f", // - API токен (используются для авторизации в аккаунте Altcraft платформы при использовании API)<br />"db_id": 2, // Идентификатор базы данных<br />"matching": "email", // алгоритм по которому в дальнейшем можно будет найти создаваемый профиль и изменить его<br />"email": "marta0706@example.com", // должен быть уникальным во избежании ошибок<br />"data": {<br />"_fname": "John",<br />"_lname": "Doe",<br />"_bdate": "2003-01-19T21:00:00Z" - дату вписать в соответствии со стандартом <br />}<br />}</li>
 <li>Нажать на кнопку &ldquo;Send&rdquo; для отправки запроса.</li>
 </ul>
 <ol></ol>
-<p><img src="https://psv4.userapi.com/c237031/u344065381/docs/d36/37d09097bb84/9.png?extra=faNQ00oNrSVfScOcQHuobqPvIbQxwv9iOO-qm5tbw6_8CbuHIUMB47fpcLMRBkAiDTCuidvTM7Oi20-Eb1ep8AUvq0ukV0MpLhPX9trYjFjgitHHHuClh0AVks32MtW6ke2hkiCyZ0Esvt4t7KFXixJ1" alt="8-9" style="display: block; margin-left: auto; margin-right: auto;" /></p>
-<p style="text-align: center;">Перед вами результат запроса и статус код.</p>
+<p><img src="https://psv4.userapi.com/c237131/u344065381/docs/d35/4d70fab545b5/9.png?extra=1b3THjPitXN51TdiUjp7e3gek__kO5UYytCQfYTLag4hJQp101H9Rxo1wySap4sHJ27nnuHCTId5YAwTYNiNWA0Nkl-PA0C9GB0icgQSSHGuRvcG9kqBYgNG6NTAvrVsq9mXCls_dupiKvam0xR2RD10" alt="Отправка запроса"width="800" height="600" style="border-style: solid;" /></p>
 <p></p>
-<p><img src="https://psv4.userapi.com/c236331/u344065381/docs/d57/9c063ff74c67/10_1.png?extra=g-_JUu_g4hlmy5aQnbzYMc4SKB1dj5yyaP-9pIBgSRRKatpGy0eTRMxmUDvg4WtlAqbWkvGlXS8PXTXMcs00NYcci1gC-WFcy7MsogyNUE7S3r2u8GWvuf8W_YtZspzzWEDESlTMNMkQwK78zyaZF8f6" alt="Результат" style="display: block; margin-left: auto; margin-right: auto;" /></p>
-<ol style="text-align: center;">При необходимости сохранить запрос:</ol>
+<p><img src="https://psv4.userapi.com/c235031/u344065381/docs/d38/5ebcd0b4d738/10_1.png?extra=98HuIxfe8HY4qi_Rv7fiVKKy5CyHVuw29dNSkxlchegeq1rCnls_ZzzPxqsVp1_H3VhbqKISmSyw5rHD4W7pflxgFbctFUpbl1xGYd0ULjGb7BcRjjpiPaUtSgmRU4WFRlOxr8WfzMOMYoYrk3zR8ByK" alt="результат"  width="800" height="600" style="border-style: solid;" /></p>
+<p style="text-align: center;">При необходимости сохранить запрос:</p>
 <ul>
 <li>Нажать кнопку "Save".</li>
-<li>Дать название запросу, например, &ldquo;Импорт одного профиля&rdquo;.</li>
-<li>Выбрать коллекцию для сохранения или создать новую.</li>
+<li>По умолчанию запрос сохранится в текущую коллекцию.&nbsp;</li>
 </ul>
-<p><img src="https://psv4.userapi.com/c237331/u344065381/docs/d12/6188b9ef6ca8/11-13.gif?extra=veziOVbuoUmhKUKxAI5YFEXZpAOl4nQblJZEPvelayR97IH3UlpylMTnUgh_ID8XV7KXTC8J4WuTTwTCvFtyxECQ3MXmM_5bJGsMVRa2kVwb8w5fJYgMDeXhxD8gp3aSZuA-v9gDQd1ZopnG8vQi_9gA" alt="Сохранение запроса" style="display: block; margin-left: auto; margin-right: auto;" /></p>
-<p style="text-align: center;">Посмотреть созданный профиль можно следующим образом:</p>
+<p><img src="https://psv4.userapi.com/c237031/u344065381/docs/d21/42ba59dd3c03/11.png?extra=-fWXnQXVOdJhiPZWJ0o5RJ5rGOTemvnd57TwgagtXcNalxPgRFCpK-2Tz2ohdQeBNGr53p4igfiD7jHubuhpdx0mf5yQKqiLHpfRU5v4_BSCIbnO_O5o5QFc5LKx2qBbTsxVDc2bc-lxMVNopkZdeeYZ" alt="сохранение" width="800" height="600" style="border-style: solid;"/></p>
+<p style="text-align: center;"><span style="text-decoration: underline;"> Посмотреть созданный профиль можно следующим образом:</span></p>
 <ul>
 <li>Создать Post запрос.</li>
 <li>В URL указать &ldquo;https://ru.altkraft.com/api/v1.1/profiles/get&rdquo;</li>
 <li>В теле запроса указать Идентификатор базы данных, email, API токен:<br />{<br />"db_id": 2, // <br />"email": "marta0706@example.com",<br />"token": "421dcf213c0b4089a839b08333de1f5f"<br />}</li>
-<li>Нажать на кнопку "Send".<br />Ответом будет информация о профиле.</li>
+<li>Нажать на кнопку "Send".</li>
 </ul>
+<p style="text-align: left;">Ответом будет информация о профиле. При необходимости сохранить запр, нажав на кнопку "Save".</p>
 <p></p>
-<p><img src="https://psv4.userapi.com/c237031/u344065381/docs/d58/cb792eb5d4c5/poslednie.gif?extra=QBtmOzMjUNpo8luWQtpYRLvyb_fdf9VUtaB4x8cwzHhk5qtw9sRtmk7Gx6vUavJgyCSqNNFXxtX-gxmZ4fm45hJkXKTYRJrtIAu5vGeyjXXd6hZQ9kZvVwKgrEJZm7-WN_r34vCjRssO9QdMNv101Dps" alt="Просмотр профиля" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p><img src="https://psv4.userapi.com/c240331/u344065381/docs/d18/0e8a03049144/3.gif?extra=seviZuoVZ4Ymk-ZxpO74pUOqiGOTED9Lk6wdTbRm0aQ3oYu3rriACqntC4kaHyqXq2LQZfTVo_JMBesEy5HXLsnFYy--o-4ERYO4SdqnAf2vsddjELIbh_o5TtIDTTNXeLQpD3sh1jd9VEIZZJ3kCjde" alt="Просмотр профиля" width="800" height="600" style="border-style: solid;" /></p>

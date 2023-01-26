@@ -25,28 +25,28 @@
 <li>Дать название новому запросу согласно цели запроса, например, "Импорт одного профиля".</li>
 <li>Изменить тип запроса с GET на POST, именно в теле метода POST будут введены данные для отправки в БД.</li>
 </ul>
-<p><img style="border-style: solid;" src="https://psv4.userapi.com/c240331/u344065381/docs/d9/9e56bc504c62/1.gif?extra=_knkqMz69x4StplUoOv8IwiSIZVk3Ob-b3irJ50_j4cu7iY3KqT-keCezvQotCYbt-WwFrxXdV02kw_KSrvP8PgIIhrFK-U_NDWr8KHnwv8elZyMu-mD_LFONpBi3OC2FASUaIai6im7uZk806Zx9VbO" alt="Создание первого запроса" width="800" height="600" /></p>
+<p><img style="border-style: solid;" src="https://psv4.userapi.com/c240331/u344065381/docs/d9/4400077b0a9b/1.gif?extra=IOeudXeyrIx3E5Db-K1a_SXoo3Kd8nZAe0s421eHYAhAIuzOUlBrUTALKvtCMJ6vz4vb_o1_AOLT0czT38EWivEYuYffObCc-kvT-IZqRDE3BxjbTj1bQCnoWNX5yrwr4f6vLFBffF2OmHyWLCMp3Btl" alt="Создание первого запроса" width="800" height="600" /></p>
 <ul>
 <li>В поле &ldquo;Enter request URL&rdquo; вставить ссылку API платформы <a href="https://ru.altkraft.com/api/v1.1/profiles/import">https://ru.altkraft.com/api/v1.1/profiles/import .</a></li>
 <li>Выбрать пункт &ldquo;Body&rdquo; для настройки деталей запроса.</li>
 <li>Нажать радиокнопку &ldquo;raw&rdquo; для выбора типа форматирования - Postman отправляет запрос с таким типом без проверки.</li>
 <li>Выбрать формат отправляемых данных - JSON.</li>
 </ul>
-<p><img style="border-style: solid;" src="https://psv4.userapi.com/c240331/u344065381/docs/d42/614e7c9aac83/2.gif?extra=9ZL13aCtiuet7P-cAM6_YZtAS3PU9QM1pm9Sz9bqmaoa78ZheuCzvljEqn_EMborv-wClSTM5fYNBCXXxETtqGfApNZlnogdv7Gv9bRrakQY-E_oYY3gZ7ARlnLWgfJUIDuVBr7NbHMdAUrhjClG2mpd" alt="Второй этап" width="800" height="600" /></p>
+<p><img style="border-style: solid;" src="https://psv4.userapi.com/c240331/u344065381/docs/d42/631e449f1eca/2.gif?extra=n7SbS31Kunch4WdWMwZTexB3aVh-UxZX0cJEY5yEnBX8tESb5n8ODswFgPpuj5VIt_RSmCJhCYascvWwnX-7iG6oof5wNTvFRPNL2qbhmikZ9CNaPdrNkeVn8LIAO3mM4hYk-4eqdkCGW--8ZyiV7I-I" alt="Второй этап" width="800" height="600" /></p>
 <ul>
-<li>В теле запроса указать необходимые данные о профиле:<br />{"token": "421dcf213c0b4089a839b08333de1f5f", // - API токен (используются для авторизации в аккаунте Altcraft платформы при использовании API)<br />"db_id": 2, // Идентификатор базы данных<br />"matching": "email", // алгоритм по которому в дальнейшем можно будет найти создаваемый профиль и изменить его<br />"email": "marta0706@example.com", // должен быть уникальным во избежании ошибок<br />"data":<br />{ <br />"_fname": "John",<br /> "_lname": "Doe",<br />"_bdate": "2003-01-19T21:00:00Z" //- дату вписать в соответствии со стандартом<br />}}</li>
+<li>В теле запроса указать необходимые данные о профиле(комментарии удалить):<br />{"token": "421dcf213c0b4089a839b08333de1f5f", // - API токен (используются для авторизации в аккаунте Altcraft платформы при использовании API)<br />"db_id": 2, // Идентификатор базы данных<br />"matching": "email", // алгоритм по которому в дальнейшем можно будет найти создаваемый профиль и изменить его<br />"email": "marta0706@example.com", // должен быть уникальным во избежании ошибок<br />"data":<br />{ <br />"_fname": "John",<br /> "_lname": "Doe",<br />"_bdate": "2003-01-19T21:00:00Z" //- дату вписать в соответствии со стандартом<br />}}</li>
 <li>Нажать на кнопку &ldquo;Send&rdquo; для отправки запроса.</li>
 </ul>
-<p><img style="border-style: solid;" src="https://psv4.userapi.com/c237131/u344065381/docs/d35/4d70fab545b5/9.png?extra=1b3THjPitXN51TdiUjp7e3gek__kO5UYytCQfYTLag4hJQp101H9Rxo1wySap4sHJ27nnuHCTId5YAwTYNiNWA0Nkl-PA0C9GB0icgQSSHGuRvcG9kqBYgNG6NTAvrVsq9mXCls_dupiKvam0xR2RD10" alt="Отправка запроса" width="800" height="600" /></p>
+<p><img style="border-style: solid;" src="https://psv4.userapi.com/c237131/u344065381/docs/d35/1d23f8ea9fa7/9.png?extra=Teap2zTtecp24KJavwecVU-5of6U_dAaQt54HK_LWgwLLR6V-PS6I19O5Rkpw0v3_bL3CdF1SVathFOpDVtySOleqrLhcx4h4mk7B2BObPdkEbk7PFAaTEJKkz48VngnWlhKCk2BAP97gj7yQLzHMbUT" alt="Отправка запроса" width="800" height="600" /></p>
 <p>&nbsp;</p>
 <p>Результат:"Запрос успешно выполнен". Статус код - "200".</p>
-<p><img style="border-style: solid;" src="https://psv4.userapi.com/c235031/u344065381/docs/d38/5ebcd0b4d738/10_1.png?extra=98HuIxfe8HY4qi_Rv7fiVKKy5CyHVuw29dNSkxlchegeq1rCnls_ZzzPxqsVp1_H3VhbqKISmSyw5rHD4W7pflxgFbctFUpbl1xGYd0ULjGb7BcRjjpiPaUtSgmRU4WFRlOxr8WfzMOMYoYrk3zR8ByK" alt="результат" width="800" height="600" /></p>
+<p><img style="border-style: solid;" src="https://psv4.userapi.com/c235031/u344065381/docs/d38/388db3d47b1d/10_1.png?extra=6KcB4PecdHdDq_JB7XLJc1359ROReFQCYDDq7Q_kmzG7RwP9szUkLEa5EtDDqS55BRu_NZQda7Faf1ffdYd83Ga001AswTG8ZIoH3yijtNJm5fYzwaO7rfIB546LHhN-eSqPspAaoM7uK3iyNB7r_PMz" alt="результат" width="800" height="600" /></p>
 <p>При необходимости сохранить запрос:</p>
 <ul>
 <li>Нажать кнопку "Save".</li>
 <li>По умолчанию запрос сохранится в текущую коллекцию.&nbsp;</li>
 </ul>
-<p><img style="border-style: solid;" src="https://psv4.userapi.com/c237031/u344065381/docs/d21/42ba59dd3c03/11.png?extra=-fWXnQXVOdJhiPZWJ0o5RJ5rGOTemvnd57TwgagtXcNalxPgRFCpK-2Tz2ohdQeBNGr53p4igfiD7jHubuhpdx0mf5yQKqiLHpfRU5v4_BSCIbnO_O5o5QFc5LKx2qBbTsxVDc2bc-lxMVNopkZdeeYZ" alt="сохранение" width="800" height="600" /></p>
+<p><img style="border-style: solid;" src="https://psv4.userapi.com/c237031/u344065381/docs/d21/b7043f7b2e10/11.png?extra=SbyzBLfkGi-61fHV8TJ9bc6m15_I7hAJG2earD3UntEJXq9rd4216I4a7GQNQwgMOFWvvukuU5CUquCCTSnqi3nqRLYm9BVG_YEyjyWMFfHy-g4QlFIlDXSsvGmf6oxaDBhlKB9N7SaWkYlGi08JrJEF" alt="сохранение" width="800" height="600" /></p>
 <p style="text-align: center;"><span style="text-decoration: underline;"> Посмотр созданного профиля</span></p>
 <ul>
 <li>Создать Post запрос.</li>
@@ -56,11 +56,11 @@
 </ul>
 <p style="text-align: left;">Ответом будет информация о профиле.</p>
 <p>&nbsp;</p>
-<p><img style="border-style: solid;" src="https://psv4.userapi.com/c240331/u344065381/docs/d18/0e8a03049144/3.gif?extra=seviZuoVZ4Ymk-ZxpO74pUOqiGOTED9Lk6wdTbRm0aQ3oYu3rriACqntC4kaHyqXq2LQZfTVo_JMBesEy5HXLsnFYy--o-4ERYO4SdqnAf2vsddjELIbh_o5TtIDTTNXeLQpD3sh1jd9VEIZZJ3kCjde" alt="Просмотр профиля" width="800" height="600" /></p>
+<p><img style="border-style: solid;" src="https://psv4.userapi.com/c240331/u344065381/docs/d18/bba3bbbe9602/3.gif?extra=SD91cbYuJnG20lSlB7Ouso_5O1aYsUHsMGr8nG347wbud-rCfi8fSR1dGsdH5rhGIApAzDSSc8OJv3GwG6l2ggKbJUvjoV0GrJ_231nSB9nKNfvxKqU-ABBoaWcP-jOaqR1cL7fvGoDo7fbXj82yxx-g" alt="Просмотр профиля" width="800" height="600" /></p>
 <p style="text-align: left;">Для сохранения запроса:</p>
 <ul>
 <li>Hажать кнопку "Save".</li>
 <li>Выбрать текущую коллекцию.</li>
 <li>Hажать кнопку "Save".</li>
 </ul>
-<p><img style="border-style: solid;" src="https://psv4.userapi.com/c237031/u344065381/docs/d18/19c9d330a863/4.gif?extra=r1a9YaBKJeobqH9ljQB2YtqhSKKtBihi54mg2neDzQvCJD3V9TdXj5HwbCCo0NdpF5XJQJutiL0wyhMg8olg6KzR38HL1u9PnBXsY87zimbmkXfq7RWsWNlgK6Twcfb3IjjcnWx6tTae8D3ArurPskEn" alt="сохранение запроса 2" width="800" height="600" /></p>
+<p><img style="border-style: solid;" src="https://psv4.userapi.com/c237031/u344065381/docs/d18/213802f6aed7/4.gif?extra=ASizhgZCtFg7DRLfhfXK5AuPGqifRGztjQm-RSBtKbF24GTpTnMlHm8LLTit5glNNDTdVATvlR6aYWmNxhR4_O8MWf1UA39cFT4SPEqCO1fp9TodH6dkHkapXjMUx5KdZLKjHX03lq74xXwONbig7_Vv" width="800" height="600" /></p>
